@@ -32,6 +32,8 @@
   --bg-light: #f7f9fc;
   --primary-accent: #0a2540;
   --primary-btn-color: #6d7a88;
+
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -59,12 +61,11 @@ h1 {
 
 h2 {
   font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: var(--h2-size);
+  font-weight: 600;
+  font-size: var(--h3-size);
   margin: 0;
   width: 100%;
   letter-spacing: -0.25px;
-  line-height: var(--h2-height);
 }
 
 h3 {
@@ -152,6 +153,26 @@ p {
   width: 50%;
   box-sizing: border-box;
   padding: 0 0 0 var(--spacing-md);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+.card .icon {
+  height: 50px;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.card h3 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: var(--h6-size);
+  margin: 0;
+  width: 100%;
 }
 
 .subtitle,
@@ -295,4 +316,110 @@ main {
 .partner-grid img {
   height: 62px;
   place-self: center;
+}
+
+/*Unified platform section*/
+
+.unified-platform-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.unified-platform-section h2 {
+  width: 50%;
+  margin-bottom: var(--spacing-md);
+}
+.unified-platform-section .primary-button {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+.unified-platform-section .primary-button:hover {
+  background-color: var(--primary-accent);
+}
+
+/*graphic grid section*/
+.graphic-grid {
+  display: grid;
+  grid-template-areas:
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+
+#credit-card {
+  grid-area: card;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#slack-invoice {
+  grid-area: slack;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#phone {
+  grid-area: phone;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#dash {
+  grid-area: dash;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+/* Integrations sections */
+
+.integrations-section {
+  background-color: var(--primary-accent);
+  color: var(--text-light);
+}
+
+.integrations-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+.integrations-section .card-container .card {
+  width: 50%;
+}
+.integrations-section .card-container .card .integrations-text {
+  width: 100%;
+  max-width: 200px;
+}
+.integrations-section .primary-button {
+  background-color: var(--blue-1);
+  color: var(--primary-accent);
+  margin: var(--spacing-md) 0;
+}
+.integrations-section .primary-button:hover {
+  background-color: var(--bg-white);
+}
+
+.integrations-section .secondary-button {
+  color: var(--blue-1);
+}
+
+#api-code {
+  max-width: 470px;
+  margin: 0 0 var(--spacing-md) 0;
+  border-radius: 20px;
+}
+#terminal-code {
+  max-width: 470px;
+  border-radius: 20px;
+}
+
+.why-swipe-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container .card {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-sm) 0 0;
+}
+.why-swipe-section .secondary-text {
+  color: var(--text-dark);
 }
